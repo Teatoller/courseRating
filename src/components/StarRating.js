@@ -1,37 +1,36 @@
 import React, { Component } from "react";
-import Star from './Star';
+import Star from "./Star";
 
 class StarRating extends Component {
+  constructor() {
+    super();
+    // Initialize a 'rating' state
+    this.state = {
+      rating: 0
+    };
+    this.renderStars = this.renderStars.bind(this);
+  }
 
-  // 1. Initialize a 'rating' state
-  state = {
-    rating: 0
-  };
-
-  // 2. Write a function that returns 5 Star components
-  renderStars = () => {
+  // Write a function that returns 5 Star components
+  renderStars() {
     let stars = [];
     let maxRating = 5;
 
     for (let i = 0; i < maxRating; i++) {
-      stars.push(
-        <Star 
-          key={i}
-        />
-      );
+      stars.push(<Star key={i} />);
     }
     return stars;
   }
 
-  // 3. Write an event handler that updates the rating state
+  // Write an event handler that updates the rating state
   //    Pass the function to a Star component via props
 
-
   render() {
+    console.log(this.state);
     return (
       <ul className="course--stars">
-        {/* 4. Render the Star components */}
-        { this.renderStars() }
+        {/* Render the Star components */}
+        {this.renderStars()}
       </ul>
     );
   }
