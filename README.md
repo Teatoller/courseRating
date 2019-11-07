@@ -13,7 +13,7 @@ Course application rating tool
 3. Run `git clone https://github.com/Teatoller/courseRating.git`
 4. cd `courseRating`
 5. open **courseRating** in your chosen editor. For **vscode** enter `code .` on terminal and press enter.
-6. `git checkout ft-update-rating-state-002`
+6. `git checkout develop`
 7. Run `yarn install`
  
 8. Run `yarn start`  the app in the development mode to open [http://localhost:3000](http://localhost:3000) to view it in the browser.
